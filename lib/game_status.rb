@@ -16,19 +16,22 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  counter = 0
-  WIN_COMBINATIONS.each{|win_combination|
-    if board[win_combination[0]] == "X" && board[win_combination[1]] == "X" && board[win_combination[2]] == "X"
-      counter +=1
+  WIN_COMBINATIONS.each do |win_combination|
+    win_index_1=win_combination[0]
+    win_index_2=win_combination[1]
+    win_index_3=win_combination[2]
+
+    position_1 = board[win_index_1] # load the value of the board at win_index_1
+    position_2 = board[win_index_2] # load the value of the board at win_index_2
+    position_3 = board[win_index_3] # load the value of the board at win_index_3
+
+    if position_1=="X" && position_2=="X" && position_3=="X"
       return win_combination
-    elsif board[win_combination[0]] == "O" && board[win_combination[1]] == "O" && board[win_combination[2]] == "O"
-      counter +=1
+    elsif position_1=="O" && position_2=="O" && position_3=="O"
       return win_combination
+    else
+      return false
     end
-  }
-  if counter == 0
-    return false
-  end
 end
 
 def full?(board)
@@ -54,3 +57,9 @@ def over?(board)
     return false
   end
 end
+
+def winner?(board)
+  if(draw?(board) == true)
+    return nil
+  elsif()
+    
