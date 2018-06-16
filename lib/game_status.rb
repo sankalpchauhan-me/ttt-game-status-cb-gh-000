@@ -32,11 +32,10 @@ def won?(board)
 end
 
 def full?(board)
-  WIN_COMBINATIONS.each{|win_combination|
-    if(position_taken?(board, win_combination[0]))
-      return true
-    elsif(board.include?(" "))
-      return false
-    end
-  }
+  if board.include?(" ")
+    return false
+  else
+    return true
+  end
+end
 end
