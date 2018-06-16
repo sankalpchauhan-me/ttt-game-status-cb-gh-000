@@ -62,4 +62,3 @@ def winner?(board)
   if(draw?(board) == true)
     return nil
   elsif()
-    
