@@ -30,3 +30,13 @@ def won?(board)
     return false
   end
 end
+
+def full?(board)
+  WIN_COMBINATIONS.each{|win_combination|
+    if(position_taken?(board, win_combination))
+      return true
+    else
+      return false
+
+  }
+
