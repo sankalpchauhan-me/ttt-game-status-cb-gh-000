@@ -39,4 +39,3 @@ def full?(board)
       return false
 
   }
-
