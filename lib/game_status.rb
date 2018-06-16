@@ -15,7 +15,7 @@ WIN_COMBINATIONS = [
   [2,4,6]
 ]
 
-def won(board)
+def won?(board)
   if(board=[" ", " ", " ", " ", " ", " ", " ", " ", " "] || board = ["X", "O", "X", "O", "X", "O", "X", "X", "O"])
     return false
   end
