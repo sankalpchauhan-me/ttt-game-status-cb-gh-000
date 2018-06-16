@@ -21,6 +21,6 @@ def won?(board)
     board.select{WIN_COMBINATIONS[0]}
   elif(board=[" ", " ", " ", " ", " ", " ", " ", " ", " "] || board = ["X", "O", "X", "O", "X", "O", "X", "X", "O"])
       return false
-      
+
   end
 end
