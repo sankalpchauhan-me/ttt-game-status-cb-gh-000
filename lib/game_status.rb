@@ -17,9 +17,10 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   win1 = WIN_COMBINATIONS[0]
-  if(board=[" ", " ", " ", " ", " ", " ", " ", " ", " "] || board = ["X", "O", "X", "O", "X", "O", "X", "X", "O"])
-    return false
-  elsif(board=["X", "X", "X", " ", " ", " ", " ", " ", " "])
+  if(board=["X", "X", "X", " ", " ", " ", " ", " ", " "])
     board.select{WIN_COMBINATIONS[0]}
+  elif(board=[" ", " ", " ", " ", " ", " ", " ", " ", " "] || board = ["X", "O", "X", "O", "X", "O", "X", "X", "O"])
+      return false
+      
   end
 end
