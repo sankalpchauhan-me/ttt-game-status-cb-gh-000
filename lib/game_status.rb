@@ -16,7 +16,9 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
+  win1 = WIN_COMBINATIONS[0]
   if(board=[" ", " ", " ", " ", " ", " ", " ", " ", " "] || board = ["X", "O", "X", "O", "X", "O", "X", "X", "O"])
-    return false
+    return false  
   end
+  board.select{WIN_COMBINATIONS[0]}
 end
