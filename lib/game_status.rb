@@ -21,7 +21,7 @@ def won?(board)
     win_index_1 = WIN_COMBINATIONS[0]
     win_index_2 = WIN_COMBINATIONS[1]
     win_index_3 = WIN_COMBINATIONS[2]
-   
+
     position_1 = board[win_index_1] # load the value of the board at win_index_1
     position_2 = board[win_index_2] # load the value of the board at win_index_2
     position_3 = board[win_index_3] # load the value of the board at win_index_3
@@ -32,4 +32,3 @@ def won?(board)
     false
   end
 end
-
