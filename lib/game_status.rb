@@ -17,7 +17,7 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   counter = 0
-  for win_combination in WIN_COMBINATIONS
+  WIN_COMBINATIONS.each{|win_combination|
     if board[win_combination[0]] == "X" && board[win_combination[1]] == "X" && board[win_combination[2]] == "X"
       counter +=1
       return win_combination
@@ -25,7 +25,7 @@ def won?(board)
       counter +=1
       return win_combination
     end
-  end
+  }
   if counter == 0
     return false
   end
