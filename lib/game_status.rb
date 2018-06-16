@@ -58,7 +58,4 @@ def over?(board)
   end
 end
 
-def winner?(board)
-  if(draw?(board) == true)
-    return nil
-  elsif()
+
