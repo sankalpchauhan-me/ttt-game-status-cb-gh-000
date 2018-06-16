@@ -16,20 +16,17 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  # win_combination is a 3 element array of indexes that compose a win, [0,1,2]
-    # grab each index from the win_combination that composes a win.
-    win_index_1 = WIN_COMBINATIONS[0]
-    win_index_2 = WIN_COMBINATIONS[1]
-    win_index_3 = WIN_COMBINATIONS[2]
-
-    win_index_1.each{|position|
-    position_1 = board[position] # load the value of the board at win_index_1
-    position_2 = board[position] # load the value of the board at win_index_2
-    position_3 = board[position] # load the value of the board at win_index_3
-}
-    if position_1 == "X" && position_2 == "X" && position_3 == "X"
-    return win_combination # return the win_combination indexes that won.
-  else
-    false
+  counter = 0
+  for win_combination in WIN_COMBINATIONS
+    if board[win_combination[0]] == "X" && board[win_combination[1]] == "X" && board[win_combination[2]] == "X"
+      counter +=1
+      return win_combination
+    elsif board[win_combination[0]] == "O" && board[win_combination[1]] == "O" && board[win_combination[2]] == "O"
+      counter +=1
+      return win_combination
+    end
+  end
+  if counter == 0
+    return false
   end
 end
